@@ -56,7 +56,7 @@ function check() {
 
     var currentText = texto;  
 
-    if (lastText !== currentText) {        
+    if (lastText !== currentText && window.speechSynthesis.pending == false) {        
         
         msg.text = currentText
         speechSynthesis.speak(msg)
